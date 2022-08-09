@@ -1,0 +1,33 @@
+# Split
+
+OBJ=Add.o Sub.o Mul.o Div.o Calc.o
+TARGET=Calc
+
+all:$(OBJ)
+	$(CXX) $(OBJ) -o $(TARGET)
+
+Add.o:Add.cpp
+	$(CXX) -c $^ -o $@
+
+Sub.o:Sub.cpp
+	$(CXX) -c $^ -o $@
+
+Mul.o:Mul.cpp
+	$(CXX) -c $^ -o $@
+
+Div.o:Div.cpp
+	$(CXX) -c $^ -o $@
+
+Calc.o:Calc.cpp
+	$(CXX) -c $^ -o $@
+
+clean:
+	$(RM) *.o *.a *.out *.exe
+
+help:
+	echo "Help"
+	echo $(AS)
+	echo $(CC)
+	echo $(CPP)
+	echo $(CXX)
+	echo $(RM)

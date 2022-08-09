@@ -1,0 +1,25 @@
+# Split
+
+all:Add.o Sub.o Mul.o Div.o Calc.o
+	g++ Add.o Sub.o Mul.o Div.o Calc.o -o Calc
+
+Add.o:Add.cpp
+	g++ -c Add.cpp -o Add.o
+
+Sub.o:Sub.cpp
+	g++ -c Sub.cpp -o Sub.o
+
+Mul.o:Mul.cpp
+	g++ -c Mul.cpp -o Mul.o
+
+Div.o:Div.cpp
+	g++ -c Div.cpp -o Div.o
+
+Calc.o:Calc.cpp
+	g++ -c Calc.cpp -o Calc.o
+
+clean:
+	rm -rf *.o *.a *.out *.exe
+
+help:
+	echo "Help"
