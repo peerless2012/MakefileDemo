@@ -1,5 +1,12 @@
 args:
-	@echo $(TARGET_ARCH)
+	@echo "OS = "$(OS)
+	@echo "MAKE_HOST = "$(MAKE_HOST)
+	@echo "TARGET_ARCH = "$(TARGET_ARCH)
+	@echo "cc = "$(cc)
+	@echo "COMPILE.cc = "$(COMPILE.cc)
+	@echo "COMPILE.cpp = "$(COMPILE.cpp)
+	@echo "OUTPUT_OPTION = "$(OUTPUT_OPTION)
+	@echo "xxx = "$(ls -l ~)
 
 # 使用`@`来抑制回显命令本身
 echo:
